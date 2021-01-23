@@ -1,0 +1,4 @@
+force clk 0 0ns, 1 50ns -r 100ns
+force j 0 0ns, 1 100ns -r 200ns
+force k 0 0ns,1 200ns -r 400ns
+run 1600ns

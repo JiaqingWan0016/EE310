@@ -1,0 +1,247 @@
+force clk 0 0ns ,1 50ns  -r 100ns
+
+#1 reset 
+force reset 	1
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+#2  MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#3 IRU¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	1
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+#4 MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#5 IRL¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	0
+force load_irl 	1
+force fetch	0
+force store_mem 0
+run 100ns
+
+#6 Load the Accumulator
+force reset 	0
+force loadac 	1
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+
+#2  MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#3 IRU¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	1
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+#4 MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#5 IRL¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	0
+force load_irl 	1
+force fetch	0
+force store_mem 0
+run 100ns
+
+#6 Load the Accumulator
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	1
+force fetch	0
+force store_mem 1
+run 200ns
+
+
+#2  MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#3 IRU¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	1
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+#4 MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#5 IRL¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	0
+force load_irl 	1
+force fetch	0
+force store_mem 0
+run 100ns
+
+#6 Load the Accumulator
+force reset 	0
+force loadac 	1
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+
+#2  MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#3 IRU¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	1
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+#4 MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns
+
+#5 IRL¡ûMDR, increment PC
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	1
+force load_iru 	0
+force load_irl 	1
+force fetch	0
+force store_mem 0
+run 100ns
+
+#6 Load the Accumulator
+force reset 	0
+force loadac 	0
+force loadpc 	1
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	0
+force store_mem 0
+run 100ns
+
+
+#2  MAR¡ûPC, prep read cycle
+force reset 	0
+force loadac 	0
+force loadpc 	0
+force incr_pc	0
+force load_iru 	0
+force load_irl 	0
+force fetch	1
+force store_mem 0
+run 100ns

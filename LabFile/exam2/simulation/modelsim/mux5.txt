@@ -1,0 +1,18 @@
+force r0 	x"0000"
+force r1 	x"0001"
+force r2 	x"0002"
+force r3 	x"0003"
+force d_in 	x"0004"
+
+force sel 000
+run 100ns
+force sel 001
+run 100ns
+force sel 010
+run 100ns
+force sel 011
+run 100ns
+force sel 100
+run 100ns
+force sel 101
+run 100ns

@@ -1,0 +1,128 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do lab7_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/CU.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:33 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/CU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CU
+# -- Compiling architecture behavioral of CU
+# End time: 12:26:34 on Dec 23,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/MCU.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:34 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/MCU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MCU
+# -- Compiling architecture bdf_type of MCU
+# End time: 12:26:34 on Dec 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/MUX2TO1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:34 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/MUX2TO1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX2TO1
+# -- Compiling architecture MUXbhv of MUX2TO1
+# End time: 12:26:35 on Dec 23,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/pc.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:35 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture behav of pc
+# End time: 12:26:35 on Dec 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/IR.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:35 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/IR.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity IR
+# -- Compiling architecture InstructionRegister of IR
+# End time: 12:26:36 on Dec 23,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/alu.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:36 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/alu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_mf_components
+# -- Compiling entity alu
+# -- Compiling architecture behav of alu
+# End time: 12:26:36 on Dec 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/accu.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:36 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/accu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity accu
+# -- Compiling architecture Accumulator of accu
+# End time: 12:26:37 on Dec 23,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/EE310_Lab8/ramlpm.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 12:26:37 on Dec 23,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/EE310_Lab8/ramlpm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity ramlpm
+# -- Compiling architecture SYN of ramlpm
+# End time: 12:26:37 on Dec 23,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.mcu
+add wave -position insertpoint  \
+sim:/mcu/storemem \
+sim:/mcu/reset \
+sim:/mcu/ramaddress \
+sim:/mcu/loadpc \
+sim:/mcu/loadiru \
+sim:/mcu/loadirl \
+sim:/mcu/loadac \
+sim:/mcu/incrpc \
+sim:/mcu/fetchout \
+sim:/mcu/clk \
+sim:/mcu/STATE \
+sim:/mcu/PC_out \
+sim:/mcu/MDR \
+sim:/mcu/IRU \
+sim:/mcu/IRL \
+sim:/mcu/AC
+do mcu.txt

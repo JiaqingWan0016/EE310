@@ -1,0 +1,24 @@
+
+force 	IRL_IN		x"01"
+force	IRU_IN		x"02"
+force	STATE_IN	x"3"
+force 	PC_IN		x"04"
+
+
+
+force	AC_IN		x"10"
+force 	MDR_IN		x"20"
+force 	address_in 	x"30"
+force 	STORE_MEM_IN	1
+force 	FETCH_IN	1
+force 	INCR_PC_IN	1
+force   LOAD_PC_IN	1
+force 	LOAD_IRL_IN	1
+force 	LOAD_IRU_IN	1
+force 	LOAD_AC_IN	1
+
+
+force 	KEY 		0
+run 200ns
+force 	KEY		1
+run 200ns

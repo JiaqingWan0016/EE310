@@ -1,0 +1,33 @@
+|dec
+TP => T.DATAB
+TP => T.DATAB
+TP => T.DATAB
+TP => T.DATAB
+TP => T.DATAB
+TP => T.DATAB
+C[4] => Equal0.IN2
+C[4] => Equal1.IN2
+C[4] => Equal2.IN1
+C[4] => Equal3.IN2
+C[4] => Equal4.IN1
+C[4] => Equal5.IN2
+C[5] => Equal0.IN1
+C[5] => Equal1.IN1
+C[5] => Equal2.IN2
+C[5] => Equal3.IN1
+C[5] => Equal4.IN0
+C[5] => Equal5.IN0
+C[6] => Equal0.IN0
+C[6] => Equal1.IN0
+C[6] => Equal2.IN0
+C[6] => Equal3.IN0
+C[6] => Equal4.IN2
+C[6] => Equal5.IN1
+T[0] <= T.DB_MAX_OUTPUT_PORT_TYPE
+T[1] <= T.DB_MAX_OUTPUT_PORT_TYPE
+T[2] <= T.DB_MAX_OUTPUT_PORT_TYPE
+T[3] <= T.DB_MAX_OUTPUT_PORT_TYPE
+T[4] <= T.DB_MAX_OUTPUT_PORT_TYPE
+T[5] <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+

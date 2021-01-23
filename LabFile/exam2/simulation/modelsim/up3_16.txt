@@ -1,0 +1,48 @@
+force TP 0 0ns ,1 50ns -r 100ns
+#load data to r0
+force data_in x"0000"
+force c_in xxx1001xx
+run 100ns 
+force c_in 011000xxx
+run 100ns
+
+#load data to r1
+force data_in x"1234"
+force c_in xxx1001xx
+run 100ns 
+force c_in 011001xxx
+run 100ns
+
+#load data to r2
+force data_in x"0056"
+force c_in xxx1001xx
+run 100ns 
+force c_in 011010xxx
+run 100ns
+
+#load data to r3
+force data_in x"FFFF"
+force c_in xxx1001xx
+run 100ns 
+force c_in 011011xxx
+run 100ns
+
+#function 1
+force data_in x"8421"
+force c_in xxx100001
+run 100ns
+force c_in xxx101100
+run 100ns
+force c_in 001011xxx
+run 200ns
+
+#function 2
+force c_in xxx100010 
+run 100ns
+force c_in xxx101011
+run 100ns
+force c_in 111001xxx
+run 200ns
+
+
+

@@ -1,0 +1,79 @@
+force test  1
+force blank 0
+run 200ns;#all the light will be on,0000000,000000
+
+force blank 1
+run 200ns;#all the light will be off,1111111,1111111
+
+force test  0
+run 200ns;#all the light will be off,1111111,1111111
+
+force test  0
+force blank 0;# active switch control seg7-display function 
+
+force upper4bit 0000 
+force lower4bit 0000
+run 100ns
+
+force lower4bit 0001
+run 100ns 
+ 
+force lower4bit 0010
+run 100ns  
+
+force lower4bit 0011
+run 100ns 
+force lower4bit 0100
+run 100ns 
+force lower4bit 0101
+run 100ns 
+force lower4bit 0110
+run 100ns 
+force lower4bit 0111
+run 100ns 
+force lower4bit 1000
+run 100ns  
+force lower4bit 1001
+run 100ns  
+force lower4bit 1010
+run 100ns  
+force lower4bit 1011
+run 100ns 
+force lower4bit 1100
+run 100ns 
+force lower4bit 1101
+run 100ns 
+force lower4bit 1110
+run 100ns 
+force lower4bit 1111
+run 100ns 
+
+
+force upper4bit 0000
+run 100ns
+force upper4bit 0001
+run 100ns
+force upper4bit 0011
+run 100ns
+force upper4bit 0100
+run 100ns
+force upper4bit 0101
+run 100ns
+force upper4bit 0110
+run 100ns
+force upper4bit 0111
+run 100ns
+force upper4bit 1000
+run 100ns
+force upper4bit 1001
+run 100ns
+force upper4bit 1011
+run 100ns
+force upper4bit 1100
+run 100ns
+force upper4bit 1101
+run 100ns
+force upper4bit 1110
+run 100ns
+force upper4bit 1111
+run 100ns

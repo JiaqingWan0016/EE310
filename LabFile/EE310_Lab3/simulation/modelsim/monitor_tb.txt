@@ -1,0 +1,40 @@
+force switch_in  0
+force push_in(0) 0
+force push_in(1) 0
+run 100ns
+
+
+force switch_in  0
+force push_in(0) 1
+force push_in(1) 0
+run 100ns
+
+force switch_in  0
+force push_in(0) 0
+force push_in(1) 1
+run 100ns
+
+force switch_in  0
+force push_in(0) 1
+force push_in(1) 1
+run 100ns
+
+force switch_in  1
+force push_in(0) 1
+force push_in(1) 1
+run 100ns
+
+force switch_in  1
+force push_in(0) 1
+force push_in(1) 0
+run 100ns
+
+force switch_in  1
+force push_in(0) 0
+force push_in(1) 1
+run 100ns
+
+force switch_in  1
+force push_in(0) 0
+force push_in(1) 0
+run 100ns

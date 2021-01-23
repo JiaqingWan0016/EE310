@@ -1,0 +1,32 @@
+
+#Load Data to MDR
+force Load_MDR		1
+force Load_AC		0
+force Load_value	0
+force Load_opcode	0
+force Data_in		10000000
+run	100ns
+
+#Load Data to AC
+force Load_MDR		0
+force Load_AC		1
+force Load_value	0
+force Load_opcode	0
+force Data_in		11000000
+run	100ns
+
+#Load Data to value
+force Load_MDR		0
+force Load_AC		0
+force Load_value	1
+force Load_opcode	0
+force Data_in		11100000
+run	100ns
+
+#Load Data to opcode
+force Load_MDR		0
+force Load_AC		0
+force Load_value	0
+force Load_opcode	1
+force Data_in		11110000
+run	100ns

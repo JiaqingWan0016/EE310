@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity accu is 
+   port(
+	LOAD_AC : in std_logic; 
+	clk : in std_logic;
+	Z :  in std_logic_vector (7 downto 0);
+	AC : out std_logic_vector (7 downto 0)
+	);
+	
+	end entity accu ; 
+		architecture Accumulator of accu is
+		----------------------------
+			process(LOAD_AC , clk)
+				begin
+					IF clk's event AND clk = '1' AND LOAD_AC = '1' then
+						AC <= Z;
+					END IF;
+			end process;	
+		----------------------------
+		end architecture Accumulator ; 

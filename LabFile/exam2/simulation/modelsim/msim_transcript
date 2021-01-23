@@ -1,0 +1,83 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do dec3_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/software/altera/exam2/up3_16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:56:25 on Dec 14,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/exam2/up3_16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity up3_16
+# -- Compiling architecture bdf_type of up3_16
+# End time: 21:56:26 on Dec 14,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/exam2/dec3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:56:26 on Dec 14,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/exam2/dec3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec3
+# -- Compiling architecture behav of dec3
+# End time: 21:56:26 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/exam2/mux5.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:56:26 on Dec 14,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/exam2/mux5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux5
+# -- Compiling architecture behav of mux5
+# End time: 21:56:26 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/exam2/reg16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:56:27 on Dec 14,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/exam2/reg16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg16
+# -- Compiling architecture behav of reg16
+# End time: 21:56:27 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/software/altera/exam2/alu16.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 21:56:27 on Dec 14,2017
+# vcom -reportprogress 300 -93 -work work D:/software/altera/exam2/alu16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu16
+# -- Compiling architecture behav of alu16
+# End time: 21:56:27 on Dec 14,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.up3_16
+add wave -position insertpoint  \
+sim:/up3_16/output \
+sim:/up3_16/mux_out \
+sim:/up3_16/data_in \
+sim:/up3_16/c_in \
+sim:/up3_16/TP \
+sim:/up3_16/R3_out \
+sim:/up3_16/R2_out \
+sim:/up3_16/R1_out \
+sim:/up3_16/R0_out
+do up3_16.txt

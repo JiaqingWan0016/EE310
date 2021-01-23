@@ -1,0 +1,40 @@
+force clk 0 0ns,1 50ns -r 100ns;#clk set
+#################
+#test for reset function,all case are 0;
+#################
+force reset 1
+force addrorvalue 11111111
+force LOAD_PC 1
+force INCR_PC 0
+run 100 ns
+force LOAD_PC 0
+force INCR_PC 1
+run 100 ns
+force LOAD_PC 0
+force INCR_PC 0
+run 100 ns
+force LOAD_PC 1
+force INCR_PC 1
+run 100 ns
+#################
+#test for load 
+#################
+force reset 0
+force addrorvalue 00000000
+force LOAD_PC 1
+run 200ns;#follow addrorvalue when clk at rising edge
+force addrorvalue 11111111
+run 100ns;#follow addrorvalue when clk at rising edge
+##################
+#test for increment
+##################
+force LOAD_PC 0
+force INCR_PC 1
+run 400ns; #add 1; shown 0 at begin;
+force LOAD_PC 1
+force INCR_PC 0 
+force addrorvalue 00000000
+run 100ns; #load value 00000000 
+force INCR_PC 1 
+force LOAD_PC 0
+run 400ns;# add 1; shown 1 at begin

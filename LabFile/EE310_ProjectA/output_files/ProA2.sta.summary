@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'IR:b2v_inst3|opcode[0]'
+Slack : -9.397
+TNS   : -73.042
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -4.831
+TNS   : -229.929
+
+Type  : Slow 1100mV 85C Model Setup 'CU:b2v_inst1|present_state.POP_1'
+Slack : -4.107
+TNS   : -4.107
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : -1.853
+TNS   : -5.277
+
+Type  : Slow 1100mV 85C Model Hold 'IR:b2v_inst3|opcode[0]'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CU:b2v_inst1|present_state.POP_1'
+Slack : 3.079
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -2.174
+TNS   : -91.839
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'IR:b2v_inst3|opcode[0]'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CU:b2v_inst1|present_state.POP_1'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'IR:b2v_inst3|opcode[0]'
+Slack : -9.463
+TNS   : -73.978
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -4.743
+TNS   : -223.330
+
+Type  : Slow 1100mV 0C Model Setup 'CU:b2v_inst1|present_state.POP_1'
+Slack : -4.028
+TNS   : -4.028
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -1.858
+TNS   : -5.378
+
+Type  : Slow 1100mV 0C Model Hold 'IR:b2v_inst3|opcode[0]'
+Slack : 0.227
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CU:b2v_inst1|present_state.POP_1'
+Slack : 3.019
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -2.174
+TNS   : -95.754
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'IR:b2v_inst3|opcode[0]'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CU:b2v_inst1|present_state.POP_1'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'IR:b2v_inst3|opcode[0]'
+Slack : -5.080
+TNS   : -38.736
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -2.689
+TNS   : -123.992
+
+Type  : Fast 1100mV 85C Model Setup 'CU:b2v_inst1|present_state.POP_1'
+Slack : -2.231
+TNS   : -2.231
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : -1.210
+TNS   : -2.607
+
+Type  : Fast 1100mV 85C Model Hold 'IR:b2v_inst3|opcode[0]'
+Slack : -0.014
+TNS   : -0.014
+
+Type  : Fast 1100mV 85C Model Hold 'CU:b2v_inst1|present_state.POP_1'
+Slack : 2.201
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -2.174
+TNS   : -59.900
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'IR:b2v_inst3|opcode[0]'
+Slack : 0.216
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CU:b2v_inst1|present_state.POP_1'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'IR:b2v_inst3|opcode[0]'
+Slack : -4.841
+TNS   : -37.162
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -2.227
+TNS   : -106.247
+
+Type  : Fast 1100mV 0C Model Setup 'CU:b2v_inst1|present_state.POP_1'
+Slack : -2.182
+TNS   : -2.182
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : -1.299
+TNS   : -2.750
+
+Type  : Fast 1100mV 0C Model Hold 'IR:b2v_inst3|opcode[0]'
+Slack : 0.021
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CU:b2v_inst1|present_state.POP_1'
+Slack : 2.202
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -2.174
+TNS   : -60.430
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'IR:b2v_inst3|opcode[0]'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CU:b2v_inst1|present_state.POP_1'
+Slack : 0.455
+TNS   : 0.000
+
+------------------------------------------------------------

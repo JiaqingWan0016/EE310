@@ -1,0 +1,14 @@
+|d_ff_tb
+clk => q~reg0.CLK
+j => process_0.IN0
+j => process_0.IN0
+j => process_0.IN0
+j => process_0.IN0
+k => process_0.IN1
+k => process_0.IN1
+k => process_0.IN1
+k => process_0.IN1
+q <> q~reg0
+p <> <UNC>
+
+

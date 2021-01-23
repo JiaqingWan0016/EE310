@@ -1,0 +1,295 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/software/altera/EE310_Lab7/simulation/modelsim
+Eaccu
+Z1 w1511840693
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8D:/software/altera/EE310_Lab7/accu.vhd
+Z5 FD:/software/altera/EE310_Lab7/accu.vhd
+l0
+L4
+Va71U1OFmEk;aLeKOOFRAN3
+!s100 cLX^L8f^ik1ZKc^Ri8NhX0
+Z6 OV;C;10.3d;59
+31
+Z7 !s110 1512662515
+!i10b 1
+Z8 !s108 1512662515.219000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/accu.vhd|
+Z10 !s107 D:/software/altera/EE310_Lab7/accu.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Aaccumulator
+R2
+R3
+DEx4 work 4 accu 0 22 a71U1OFmEk;aLeKOOFRAN3
+l15
+L14
+VJlSzAmVE_jmOLVPUYWWPb1
+!s100 F7TUd`8`OSJ:=YjL:0TBB3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+Z13 w1510844632
+Z14 DPx9 altera_mf 20 altera_mf_components 0 22 :zX8E]9f?PCk8X:Y[X97:1
+Z15 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z16 8D:/software/altera/EE310_Lab7/alu.vhd
+Z17 FD:/software/altera/EE310_Lab7/alu.vhd
+l0
+L7
+V:EH_?mG8D:f9`g<Q[Y=LR1
+!s100 WDjzXFo=C0LAiEEAPT=a81
+R6
+31
+Z18 !s110 1512662514
+!i10b 1
+Z19 !s108 1512662514.013000
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/alu.vhd|
+Z21 !s107 D:/software/altera/EE310_Lab7/alu.vhd|
+!i113 1
+R11
+R12
+Abehav
+R14
+R15
+R2
+R3
+DEx4 work 3 alu 0 22 :EH_?mG8D:f9`g<Q[Y=LR1
+l20
+L19
+Ve_EXh;G[MD@AImzD02jJC1
+!s100 b5WG_@^RILFhlz:YK:AU>0
+R6
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R11
+R12
+Eir
+Z22 w1508639376
+R2
+R3
+R0
+Z23 8D:/software/altera/EE310_Lab7/IR.vhd
+Z24 FD:/software/altera/EE310_Lab7/IR.vhd
+l0
+L4
+Vaz@_VN^@i`WePhlA[X6oE3
+!s100 _H7ONnSfkFiI8O5HL?b<^3
+R6
+31
+Z25 !s110 1512662513
+!i10b 1
+Z26 !s108 1512662513.247000
+Z27 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/IR.vhd|
+Z28 !s107 D:/software/altera/EE310_Lab7/IR.vhd|
+!i113 1
+R11
+R12
+Ainstructionregister
+R2
+R3
+DEx4 work 2 ir 0 22 az@_VN^@i`WePhlA[X6oE3
+l15
+L14
+Vn3P2dD@K=J0^>:`WX7ED20
+!s100 nj@1QHaico@@_PVeZA`]U1
+R6
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Elab7
+Z29 w1511846389
+R2
+R3
+R0
+Z30 8D:/software/altera/EE310_Lab7/lab7.vhd
+Z31 FD:/software/altera/EE310_Lab7/lab7.vhd
+l0
+L25
+VdUd^bHViaaFlJ[I6K;z6<0
+!s100 @SfFADiEXI2_8GcBQ1zPe2
+R6
+31
+Z32 !s110 1512662511
+!i10b 1
+Z33 !s108 1512662510.465000
+Z34 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/lab7.vhd|
+Z35 !s107 D:/software/altera/EE310_Lab7/lab7.vhd|
+!i113 1
+R11
+R12
+Abdf_type
+R2
+R3
+DEx4 work 4 lab7 0 22 dUd^bHViaaFlJ[I6K;z6<0
+l120
+L47
+VDLFcOK49gLZ9aY1[CT]lP3
+!s100 WQnPPI@8D:HP?0JEhj_7k3
+R6
+31
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R11
+R12
+Emux2to1
+Z36 w1511421523
+R2
+R3
+R0
+Z37 8D:/software/altera/EE310_Lab7/MUX2TO1.vhd
+Z38 FD:/software/altera/EE310_Lab7/MUX2TO1.vhd
+l0
+L4
+VU6lKf3C38JPzeXcWINUFg1
+!s100 Ge2S8aTdmC@P>XD6fH1G93
+R6
+31
+R32
+!i10b 1
+Z39 !s108 1512662511.638000
+Z40 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/MUX2TO1.vhd|
+Z41 !s107 D:/software/altera/EE310_Lab7/MUX2TO1.vhd|
+!i113 1
+R11
+R12
+Amuxbhv
+R2
+R3
+DEx4 work 7 mux2to1 0 22 U6lKf3C38JPzeXcWINUFg1
+l13
+L12
+V`W9Q1?O@WDHk2QW4b2I1l0
+!s100 >FGz@WX4dV4``HL<bX7BA2
+R6
+31
+R32
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R11
+R12
+Epc
+Z42 w1510564414
+R15
+Z43 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z44 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R0
+Z45 8D:/software/altera/EE310_Lab7/pc.vhd
+Z46 FD:/software/altera/EE310_Lab7/pc.vhd
+l0
+L7
+VWNCM2APikX>PnTk69_P;R1
+!s100 QOHgNU6W4WC`X>^cUG;kc0
+R6
+31
+Z47 !s110 1512662512
+!i10b 1
+Z48 !s108 1512662512.106000
+Z49 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/pc.vhd|
+Z50 !s107 D:/software/altera/EE310_Lab7/pc.vhd|
+!i113 1
+R11
+R12
+Abehav
+R15
+R43
+R44
+R2
+R3
+DEx4 work 2 pc 0 22 WNCM2APikX>PnTk69_P;R1
+l19
+L18
+V92`=SCW>WIkh6Vj7@1M7V2
+!s100 Ti0AgXh>`<CT7oXmMoh[L2
+R6
+31
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R11
+R12
+Eramlpm
+Z51 w1511419876
+R14
+R2
+R3
+R0
+Z52 8D:/software/altera/EE310_Lab7/ramlpm.vhd
+Z53 FD:/software/altera/EE310_Lab7/ramlpm.vhd
+l0
+L43
+V59DHXkM8GhJ_M<e^;l]H00
+!s100 mQK[A0hjWLf^jZPZ^:hMU3
+R6
+31
+R7
+!i10b 1
+Z54 !s108 1512662515.810000
+Z55 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab7/ramlpm.vhd|
+Z56 !s107 D:/software/altera/EE310_Lab7/ramlpm.vhd|
+!i113 1
+R11
+R12
+Asyn
+R14
+R2
+R3
+DEx4 work 6 ramlpm 0 22 59DHXkM8GhJ_M<e^;l]H00
+l59
+L55
+VKQkii:4=KFmV9Zj3<z>3l3
+!s100 Pb5HDK`Wn[d;KazF0I[gA3
+R6
+31
+R7
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R11
+R12

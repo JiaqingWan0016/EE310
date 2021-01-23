@@ -1,0 +1,432 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+entity CU is port(
+		opcode 	 :	 in std_logic_vector (7 downto 0);  
+		NFLG		 :	 in std_logic ;	
+		ZFLG		 :	 in std_logic ;
+		RESET		 :	 in std_logic ;
+		CLK		 :	 in std_logic ;			     --define the input signal
+		STATE		 :	out std_logic_vector (3 downto 0);
+		LOAD_AC	 :	out std_logic ;
+		LOAD_IRU	 :	out std_logic ;
+		LOAD_IRL	 :	out std_logic ;
+		LOAD_PC	 :	out std_logic ;
+		INCR_PC	 : out std_logic ;
+		FETCH		 : out std_logic_vector (1 downto 0) ;
+		STORE_MEN :	out std_logic ;             --define the output signal
+		LOAD_SP	 :	out std_logic := '0';
+		INCR_SP	 :	out std_logic := '0';
+		SUBT_SP	 :	out std_logic := '0';
+		AC0PC1	 :	out std_logic := '0'
+	);
+end CU;
+
+architecture behavioral of CU is
+	type state_type is (start, prepu, fetchu, prep1, fetch1, class1, class2, class3, class3_2, class4, class5, 
+								SP_LOAD, PUSH_1, PUSH_2, POP_1, POP_2, POP_3, JSR_1, JSR_2, JSR_3, RTS_1, RTS_2, RTS_3);
+	signal present_state, next_state : state_type;         
+begin  
+
+	sync_proc:   -- synchronous process
+	process (RESET, CLK, opcode)
+	begin
+		if RESET = '1' then 
+			present_state <= start;
+		elsif (CLK'event and CLK = '0') then -- falling edge
+			present_state <= next_state;
+		end if;
+	end process;
+	comb_proc:   -- combinational process
+	process (present_state, next_state,opcode)
+	begin
+		case present_state is
+			when start =>                 --state 1 ：start
+				STATE 		<= x"0";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				AC0PC1		<= '0';
+				next_state	<= prepu;
+			when prepu =>                --state 2 ：prepare to load IRU
+				STATE 		<= x"1";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "01";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state	<= fetchu;
+			when fetchu =>              --state 3 ：fetchU
+				STATE 		<= x"2";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '1';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '1';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				case opcode  is
+					when x"00" =>
+						next_state <= class1;
+					when x"04" =>
+					   next_state <= class1;
+					when x"16" =>
+						next_state <= PUSH_1;
+					when x"17" =>
+						next_state <= POP_1;
+					when x"19" =>
+						next_state <=RTS_1;
+					when others =>
+						next_state <= prep1; 
+				end case;
+			when prep1 =>               --state 4 ：prepare to load IRL
+				STATE 		<= x"3";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "01";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state	<= fetch1;
+			when fetch1 =>              --state 5 ： fetch
+				STATE 		<= x"4";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '1';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '1';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				case opcode is
+					when x"01" =>
+						next_state <= class3;
+					when x"02" =>
+						next_state <= class2;
+					when x"03" =>
+						next_state <= class4;
+					when x"05" =>
+						next_state <= class3;
+					when x"06" =>
+						next_state <= class2;
+					when x"07" =>
+						next_state <= class3;
+					when x"08" =>
+						next_state <= class2;
+					when x"09" =>
+						next_state <= class3;
+					when x"0A" =>
+						next_state <= class3;
+					when x"0B" =>
+						next_state <= class3;
+					when x"0C" =>
+						next_state <= class3;
+					when x"0D" =>
+						next_state <= class3;
+					when x"0E" =>
+						next_state <= class2;
+					when x"0F" =>
+						next_state <= class2;
+					when x"10" =>
+						next_state <= class5;
+					when x"11" =>
+						next_state <= class5;
+					when x"12" =>
+						next_state <= class5;
+					when x"13" =>
+						next_state <= class5;
+					when x"14" =>
+						next_state <= class5;
+					when x"15" =>
+						next_state <= SP_LOAD;	
+					when x"18" =>
+						next_state <= JSR_1;
+					when others =>
+					   next_state <= prepu;
+				end case;
+			when class1 =>   				--state 6 :class1
+				STATE 		<= x"5";
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '1';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				if opcode = x"04" then
+				LOAD_AC 		<= '1';
+				next_state	<= prepu;
+				else 
+				LOAD_AC <= '0';
+				next_state	<= prepu;
+				end if;
+			when class2 =>					--state 7 :class2
+				STATE 		<= x"6";
+				LOAD_AC 		<= '1';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state	<= prepu;
+			when class3 =>					--state 8 :class3
+				STATE 		<= x"7";
+				LOAD_IRU 	<= '0';			
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN 	<= '0';
+			   LOAD_IRL		<= '0';
+				LOAD_AC 	<= '0';
+				AC0PC1		<= '0';
+			   next_state <= class3_2;
+			when class3_2 =>					--state 8 :class3
+				STATE 		<= x"7";
+				LOAD_IRU 	<= '0';			
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN 	<= '0';
+			   LOAD_IRL		<= '0';
+				LOAD_AC 	<= '1';
+				AC0PC1		<= '0';
+			   next_state <= prepu;
+			when class4 =>					--state 9 : class4
+				STATE 		<= x"8";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '1';
+				AC0PC1		<= '0';
+				next_state <= prepu;
+			when class5 =>					--state 10 : class5
+				STATE 		<= x"9";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				if NFLG = '1' then		
+					LOAD_PC		<= '1';
+					else
+					LOAD_PC		<= '0';
+				end if;
+				next_state  <= prepu;
+			when SP_LOAD =>
+			   STATE 		<= x"A";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '1';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				next_state <= prepu;
+			when PUSH_1 =>          --SP = SP-1;
+				STATE 		<= x"B";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '1';
+				FETCH			<= "10";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= PUSH_2;
+			when PUSH_2 =>         --M[SP]<=AC
+				STATE 		<= x"B";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "10";
+				STORE_MEN	<= '1';
+				AC0PC1		<= '0';
+				next_state <= prepu;
+			when POP_1 =>				--AC<=M[SP]
+				STATE 		<= x"C";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "10";
+				STORE_MEN	<= '0';
+				next_state <= POP_2;
+			when POP_2 =>				--AC<=M[SP]
+				STATE 		<= x"C";
+				LOAD_AC 		<= '1';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "10";
+				STORE_MEN	<= '0';
+				next_state <= POP_3;
+			when POP_3 =>				--SP <= SP+1
+				STATE 		<= x"C";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '1';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= prepu;
+			when JSR_1 =>				--SP<=SP-1
+				STATE 		<= x"D";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '1';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= JSR_2;
+			when JSR_2 =>          --M[SP]<=PC
+				STATE 		<= x"D";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "10";
+				STORE_MEN	<= '1';
+				AC0PC1		<= '1';
+				next_state <= JSR_3;
+			when JSR_3 =>          --PC<=address
+				STATE 		<= x"D";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '1';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= prepu;
+			when RTS_1 =>				--PC<=M[SP]
+				STATE 		<= x"E";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '1';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "10";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= RTS_2;
+			when RTS_2 =>				--PC<=M[SP]
+				STATE 		<= x"E";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '1';
+				LOAD_PC		<= '1';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '0';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= RTS_3;
+			when RTS_3 =>				--SP<=SP+1
+				STATE 		<= x"E";
+				LOAD_AC 		<= '0';
+				LOAD_IRU 	<= '0';
+				LOAD_IRL		<= '0';
+				LOAD_PC		<= '0';
+				INCR_PC		<= '0';
+				LOAD_SP		<= '0';
+				INCR_SP		<= '1';
+				SUBT_SP		<= '0';
+				FETCH			<= "00";
+				STORE_MEN	<= '0';
+				AC0PC1		<= '0';
+				next_state <= prepu;
+			when others => null;
+		end case;
+	end process;
+end behavioral;

@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -12.839
+TNS   : -99.721
+
+Type  : Slow 1100mV 85C Model Setup 'KEY[0]'
+Slack : -6.908
+TNS   : -204.922
+
+Type  : Slow 1100mV 85C Model Hold 'KEY[0]'
+Slack : -5.731
+TNS   : -27.945
+
+Type  : Slow 1100mV 85C Model Hold 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -0.001
+TNS   : -0.001
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -2.174
+TNS   : -85.739
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : 0.053
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -12.768
+TNS   : -99.828
+
+Type  : Slow 1100mV 0C Model Setup 'KEY[0]'
+Slack : -6.641
+TNS   : -195.789
+
+Type  : Slow 1100mV 0C Model Hold 'KEY[0]'
+Slack : -5.648
+TNS   : -27.510
+
+Type  : Slow 1100mV 0C Model Hold 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -2.174
+TNS   : -83.196
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : 0.034
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -6.957
+TNS   : -53.713
+
+Type  : Fast 1100mV 85C Model Setup 'KEY[0]'
+Slack : -5.354
+TNS   : -122.219
+
+Type  : Fast 1100mV 85C Model Hold 'KEY[0]'
+Slack : -2.852
+TNS   : -13.880
+
+Type  : Fast 1100mV 85C Model Hold 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -0.174
+TNS   : -0.289
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -2.174
+TNS   : -71.090
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -6.670
+TNS   : -51.888
+
+Type  : Fast 1100mV 0C Model Setup 'KEY[0]'
+Slack : -4.332
+TNS   : -101.028
+
+Type  : Fast 1100mV 0C Model Hold 'KEY[0]'
+Slack : -2.830
+TNS   : -13.857
+
+Type  : Fast 1100mV 0C Model Hold 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : -0.116
+TNS   : -0.116
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -2.174
+TNS   : -70.089
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MCU:MCU_BLOCK|IR:b2v_inst3|opcode[0]'
+Slack : 0.191
+TNS   : 0.000
+
+------------------------------------------------------------

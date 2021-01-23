@@ -1,0 +1,21 @@
+force reset 1
+run 100ns
+
+#test load opcode
+force reset 0
+
+force clk 0 0ns, 1 50ns -r 100ns
+force MDR 11111111
+force LOAD_IRU 1
+force LOAD_IRL 0
+run 200ns
+force MDR 00000000
+run 200ns
+
+# test load addr or value
+force MDR 11111111
+force LOAD_IRL 1
+force LOAD_IRU 0
+run 200ns
+force MDR 00000000
+run 200ns

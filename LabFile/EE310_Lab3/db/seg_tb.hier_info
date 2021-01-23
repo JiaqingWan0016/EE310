@@ -1,0 +1,14 @@
+|monitor_tb
+ledr0 <= monitor:inst2.led
+key0 => monitor:inst2.button1
+key1 => monitor:inst2.button2
+sw0 => monitor:inst2.switch
+
+
+|monitor_tb|monitor:inst2
+button1 => led.IN0
+button2 => led.IN1
+switch => led.IN1
+led <= led.DB_MAX_OUTPUT_PORT_TYPE
+
+

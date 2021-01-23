@@ -1,0 +1,26 @@
+labrory ieee;
+use ieee.std_logic_1164.all;
+
+entity alu is
+  prot(
+	  MDR : in std_logic_vector(7 downto 0);
+	  AC : in std_logic_vector(7 downto 0);
+	  opcode : in std_logic_vector(7 downto 0);
+	  value : in std_logic_vector(7 downto 0);
+	  STORE_MEM , LOAD_AC : out std_logic;
+	  Z : out std_logic_vector(7 downto 0);
+  );
+end entity alu;
+
+  architecture alubhv of alu is
+  begin 
+	  process(opcode)
+	  begin
+			case opcode is
+			when x"00" => ;
+			when X"01" => Z;
+			when others => null;
+			end case;
+	  end process;
+  end alubhv;
+  

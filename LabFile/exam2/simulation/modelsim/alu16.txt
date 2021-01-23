@@ -1,0 +1,18 @@
+force a x"1234"
+force b X"8421"
+force c 000
+run 100ns
+force c 001
+run 100ns
+force c 010
+run 100ns
+force c 011
+run 100ns
+force c 100
+run 100ns
+force c 101
+run 100ns
+force c 110
+run 100ns
+force c 111
+run 100ns

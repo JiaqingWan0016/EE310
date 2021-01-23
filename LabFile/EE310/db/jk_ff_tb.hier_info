@@ -1,0 +1,14 @@
+|jk_ff_tb
+ledr0 <= jk_ff:inst.Q
+sw0 => jk_ff:inst.J
+sw1 => jk_ff:inst.K
+key0 => jk_ff:inst.clk
+
+
+|jk_ff_tb|jk_ff:inst
+J => S.IN1
+K => S.IN1
+clk => S.CLK
+Q <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+

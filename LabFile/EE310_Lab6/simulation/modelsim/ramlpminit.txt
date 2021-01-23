@@ -1,0 +1,51 @@
+#read data from the initial memory
+force clock 0 50ns, 1 100ns -r 100ns
+force	wren	0
+force	address	x"00" 
+run 200ns
+
+force	address	x"01" 
+run 200ns
+
+force	address	x"02"
+run 200ns
+
+force	address	x"03"
+run 200ns
+
+force	address	x"04"
+run 200ns
+
+force	address	x"05"
+run 200ns
+
+force	address	x"06"
+run 200ns
+
+force	address	x"07"
+run 200ns
+
+force	address	x"08"
+run 200ns
+
+force	address	x"09"
+run 200ns
+
+force	address	x"0A"
+run 200ns
+
+force	address	x"0B"
+run 200ns
+
+force	address	x"0C"
+run 200ns
+
+force	address	x"0D"
+run 200ns
+
+
+force	address	x"0E"
+run 200ns
+
+force	address	x"0F"
+run 200ns

@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/software/altera/EE310_Lab6/simulation/modelsim
+Eramlpminit
+Z1 w1510389057
+Z2 DPx9 altera_mf 20 altera_mf_components 0 22 :zX8E]9f?PCk8X:Y[X97:1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8D:/software/altera/EE310_Lab6/ramlpminit.vhd
+Z6 FD:/software/altera/EE310_Lab6/ramlpminit.vhd
+l0
+L43
+Va3TKo>NDhlzYd=f7JOYb[2
+!s100 `GNzeAf>`FSSamYzel:230
+Z7 OV;C;10.3d;59
+31
+Z8 !s110 1510456679
+!i10b 1
+Z9 !s108 1510456679.331000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/software/altera/EE310_Lab6/ramlpminit.vhd|
+Z11 !s107 D:/software/altera/EE310_Lab6/ramlpminit.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Asyn
+R2
+R3
+R4
+DEx4 work 10 ramlpminit 0 22 a3TKo>NDhlzYd=f7JOYb[2
+l59
+L55
+VS>Ffz?@94D@93I@@n689Y3
+!s100 gWR8jNN[RjGGfieWk=b?M0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13

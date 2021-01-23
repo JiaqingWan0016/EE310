@@ -1,0 +1,12 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/Administrator/Desktop/exam/dec3.vhd}
+vcom -93 -work work {C:/Users/Administrator/Desktop/exam/mux5.vhd}
+vcom -93 -work work {C:/Users/Administrator/Desktop/exam/reg16.vhd}
+vcom -93 -work work {C:/Users/Administrator/Desktop/exam/alu16.vhd}
+

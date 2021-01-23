@@ -1,0 +1,22 @@
+force 	CLK 		0 0ns,1 50ns -r 100ns
+force	RESET		0
+force 	addrvalue	x"00"
+force	LOAD_SP		1
+force	INCR_SP		0
+force 	SUBT_SP		0
+run 100ns
+
+force	LOAD_SP		1
+force	INCR_SP		0
+force 	SUBT_SP		0
+run 100ns
+
+force	LOAD_SP		0
+force	INCR_SP		1
+force 	SUBT_SP		0
+run 100ns
+
+force	LOAD_SP		0
+force	INCR_SP		0
+force 	SUBT_SP		1
+run 100ns

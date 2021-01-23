@@ -1,0 +1,117 @@
+force clock 0 0ns,1 50ns -r 100ns
+#write data to address 
+force wren 	1
+force data 	x"0F"
+force address	x"00"
+run 200ns
+force wren 	1
+force data 	x"0E"
+force address	x"01"
+run 200ns
+force wren 	1
+force data 	x"0D"
+force address	x"02"
+run 200ns
+force wren 	1
+force data 	x"0C"
+force address	x"03"
+run 200ns
+force wren 	1
+force data 	x"0B"
+force address	x"04"
+run 200ns
+force wren 	1
+force data 	x"0A"
+force address	x"05"
+run 200ns
+force wren 	1
+force data 	x"09"
+force address	x"06"
+run 200ns
+force wren 	1
+force data 	x"08"
+force address	x"07"
+run 200ns
+force wren 	1
+force data 	x"07"
+force address	x"08"
+run 200ns
+force wren 	1
+force data 	x"06"
+force address	x"09"
+run 200ns
+force wren 	1
+force data 	x"05"
+force address	x"0A"
+run 200ns
+force wren 	1
+force data 	x"04"
+force address	x"0B"
+run 200ns
+force wren 	1
+force data 	x"03"
+force address	x"0C"
+run 200ns
+force wren 	1
+force data 	x"02"
+force address	x"0D"
+run 200ns
+force wren 	1
+force data 	x"01"
+force address	x"0E"
+run 200ns
+force wren 	1
+force data 	x"00"
+force address	x"0F"
+run 200ns
+
+
+#read from address 
+force wren	0
+force address	x"00"
+run 200ns
+force wren	0
+force address	x"01"
+run 200ns
+force wren	0
+force address	x"02"
+run 200ns
+force wren	0
+force address	x"03"
+run 200ns
+force wren	0
+force address	x"04"
+run 200ns
+force wren	0
+force address	x"05"
+run 200ns
+force wren	0
+force address	x"06"
+run 200ns
+force wren	0
+force address	x"07"
+run 200ns
+force wren	0
+force address	x"08"
+run 200ns
+force wren	0
+force address	x"09"
+run 200ns
+force wren	0
+force address	x"0A"
+run 200ns
+force wren	0
+force address	x"0B"
+run 200ns
+force wren	0
+force address	x"0C"
+run 200ns
+force wren	0
+force address	x"0D"
+run 200ns
+force wren	0
+force address	x"0E"
+run 200ns
+force wren	0
+force address	x"0F"
+run 200ns

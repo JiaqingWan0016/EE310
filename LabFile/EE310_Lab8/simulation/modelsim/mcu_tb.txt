@@ -1,0 +1,9 @@
+force KEY(0) 0 0ns,1 50ns -r 100ns
+force KEY(1) 0 
+run 100ns
+force KEY(1) 1
+force KEY(2) 0
+run 2500ns
+force KEY(2) 1
+run 2500ns
+ 

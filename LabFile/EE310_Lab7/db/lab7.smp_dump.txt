@@ -1,0 +1,8 @@
+
+State Machine - |MCU|CU:b2v_inst1|present_state
+Name present_state.fetch1 present_state.prep1 present_state.fetchu present_state.prepu present_state.start 
+present_state.start 0 0 0 0 0 
+present_state.prepu 0 0 0 1 1 
+present_state.fetchu 0 0 1 0 1 
+present_state.prep1 0 1 0 0 1 
+present_state.fetch1 1 0 0 0 1 
